@@ -40,4 +40,45 @@ public class spiralArray {
         }
         return res;
     }
+
+
+
+    public int[][] leetcode059(int n) {
+        int[][] res = new int[n][n];
+        if(n==0){
+            return res;
+        }
+        int count=1;
+        int row = res.length;
+        int col = res[0].length;
+        int top = 0;
+        int bottom = row-1;
+        int left = 0;
+        int right = col-1;
+        while(left<=right&&top<=bottom){
+            for(int i=left;i<=right;i++){
+                res[top][i]=count;
+                count++;
+            }
+            for (int row1 = top + 1; row1 <= bottom; row1++) {
+                res[row1][right]=count;
+                count++;
+            }
+            if(left<right&&top<bottom){
+                for(int j=right-1;j>left;j--){
+                    res[bottom][j]=count;
+                    count++;
+                }
+                for(int x = bottom ; x> top;x--){
+                    res[x][left]=count;
+                    count++;
+                }
+            }
+            left++;
+            right--;
+            top++;
+            bottom--;
+        }
+        return res;
+    }
 }
