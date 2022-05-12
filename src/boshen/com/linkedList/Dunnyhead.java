@@ -1,13 +1,13 @@
 package boshen.com.linkedList;
 
 public class Dunnyhead {
-    class ListNode{
-        int val;
-        ListNode next;
-        ListNode() {}
-        ListNode(int val) { this.val = val; }
-        ListNode(int val, ListNode next) { this.val = val; this.next = next; }
-    }
+//    class ListNode{
+//        int val;
+//        ListNode next;
+//        ListNode() {}
+//        ListNode(int val) { this.val = val; }
+//        ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+//    }
 
     /*
     * 虚拟头节点是用来解决头节点处理逻辑与其它节点处理逻辑不一样的问题的，通常链表中使用pre指针和cur指针
@@ -33,4 +33,6 @@ public class Dunnyhead {
         }
         return dunnyHead.next;
     }
+
+
 }
